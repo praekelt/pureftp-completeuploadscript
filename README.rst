@@ -1,7 +1,7 @@
 PureFTP Complete Upload Script
 ==============================
 
-**Upload script creating a .complete file on complete file upload.**
+**Upload script creating a <uploaded_filename>.complete file on complete file upload.**
 
 Configuration
 -------------
@@ -14,7 +14,7 @@ Configuration
 
     STANDALONE_OR_INETD=standalone
 
-#. Set the user and group ID under which the upload script should be run (it's suggested that this be set to the ftpuser and ftpgroup ids. In /etc/default/pure-ftpd-common set:
+#. Set the user and group ID under which the upload script should be run (it's suggested that this be set to the ``ftpuser`` and ``ftpgroup`` ids. In /etc/default/pure-ftpd-common set:
 
     UPLOADUID=1021
     UPLOADGID=1022
@@ -26,7 +26,7 @@ Configuration
 
 #. Set the upload script path. In /etc/default/pure-ftpd-common set:
     
-    UPLOADSCRIPT=<path/to/complet_upload_script.sh>
+    UPLOADSCRIPT=<path/to/complete_upload_script.sh>
 
 #. Restart PureFTP::
 
