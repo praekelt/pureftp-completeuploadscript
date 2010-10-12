@@ -16,7 +16,8 @@ Configuration
 
 #. Set the user and group ID under which the upload script should be run (it's suggested that this be set to the ``ftpuser`` and ``ftpgroup`` ids. In /etc/default/pure-ftpd-common set:
 
-    UPLOADUID=1021 
+    UPLOADUID=1021
+
     UPLOADGID=1022
 
 #. (You can retrieve ``ftpuser`` and ``ftpgroup`` ids by running)::
