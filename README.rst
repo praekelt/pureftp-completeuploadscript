@@ -14,18 +14,19 @@ Configuration
 
     STANDALONE_OR_INETD=standalone
 
-#. Set the user ID under which the script should be run. It is suggested that this be set to the ftpuser id::
+#. Set the user and group ID under which the upload script should be run (it's suggested that this be set to the ftpuser and ftpgroup ids. In /etc/default/pure-ftpd-common set:
+
+    UPLOADUID=1021
+    UPLOADGID=1022
+
+#. (You can retrieve ftpuser and ftpgroup ids by running)::
 
     $ if ftpuser
     uid=1021(ftpuser) gid=1022(ftpgroup) groups=1022(ftpgroup)
 
-In /etc/default/pure-ftpd-common set:
-    UPLOADUID=1021
-    UPLOADGID=1022
-
-#. Tell pure-ftpd where the script to execute is located. Buildout creates an upload script for each instance under the buildout root folder's pureftp path. In /etc/default/pure-ftpd-common set::
+#. Set the upload script path. In /etc/default/pure-ftpd-common set:
     
-    UPLOADSCRIPT=/home/you/buildout-path/pureftp/upload_script_production_main.sh
+    UPLOADSCRIPT=<path/to/complet_upload_script.sh>
 
 #. Restart PureFTP::
 
