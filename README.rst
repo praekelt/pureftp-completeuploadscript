@@ -6,11 +6,11 @@ PureFTP Complete Upload Script
 Configuration
 -------------
 
-#. Enable PureFTP's upload script option:
+#. Enable PureFTP's upload script option::
 
-    sudo echo "yes" > /etc/pure-ftpd/conf/CallUploadScript
+    $ sudo echo "yes" > /etc/pure-ftpd/conf/CallUploadScript
 
-#. Run PureFTP in standalone mode (not inetd mode). In /etc/default/pure-ftpd-common set::
+#. Run PureFTP in standalone mode (not inetd mode). In /etc/default/pure-ftpd-common set:
 
     STANDALONE_OR_INETD=standalone
 
@@ -19,7 +19,7 @@ Configuration
     $ if ftpuser
     uid=1021(ftpuser) gid=1022(ftpgroup) groups=1022(ftpgroup)
 
-In /etc/default/pure-ftpd-common set::
+In /etc/default/pure-ftpd-common set:
     UPLOADUID=1021
     UPLOADGID=1022
 
