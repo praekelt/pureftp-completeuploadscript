@@ -1,2 +1,2 @@
 #!/bin/sh
-touch $1.complete
+touch "$1.complete"
